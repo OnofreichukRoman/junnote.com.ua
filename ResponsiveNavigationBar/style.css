@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://image.freepik.com/free-vector/minimal-pastel-background-with-text-space_1017-14853.jpg);
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5d4954;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        opacity: 0.9;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        -webkit-transition: transform 0.3s ease-in;
+        -moz-transition: transform 0.3s ease-in;
+        -ms-transition: transform 0.3s ease-in;
+        -o-transition: transform 0.3s ease-in;
+}
+
+    .nav-links li {
+        opacity: 0;
+        //margin-left: 45px;
+    }
+
+    
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+        -webkit-transform: translateX(50px);
+        -moz-transform: translateX(50px);
+        -ms-transform: translateX(50px);
+        -o-transform: translateX(50px);
+}
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+}
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    -moz-transform: rotate(-45deg) translate(-5px, 6px);
+    -ms-transform: rotate(-45deg) translate(-5px, 6px);
+    -o-transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+    -moz-transform: rotate(45deg) translate(-5px, -6px);
+    -ms-transform: rotate(45deg) translate(-5px, -6px);
+    -o-transform: rotate(45deg) translate(-5px, -6px);
+}
